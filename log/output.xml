@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.11.0 on win32)" generated="2026-01-29T20:50:02.373830" rpa="false" schemaversion="5">
+<suite id="s1" name="Testentretienfile" source="C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\file\testentretienfile.robot">
+<test id="s1-t1" name="le fichier" line="18">
+<kw name="le fichier log">
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2026-01-29T20:50:02.903263" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\file\myfile.log"&gt;C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\file\myfile.log&lt;/a&gt;'.</msg>
+<msg time="2026-01-29T20:50:02.905410" level="INFO">${my file} = mon premier fichier log dans robot pour maintenant</msg>
+<var>${my file}</var>
+<arg>C:\\Users\\GENIUS\\IdeaProjects\\robotframeworktestforentretien\\tests\\file\\myfile.log</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2026-01-29T20:50:02.903263" elapsed="0.002147"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${my file}</arg>
+<arg>mon premier fichier log dans robot</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2026-01-29T20:50:02.905410" elapsed="0.000000"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${my file}</arg>
+<arg>erreur critique</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2026-01-29T20:50:02.905410" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-01-29T20:50:02.902093" elapsed="0.003317"/>
+</kw>
+<status status="PASS" start="2026-01-29T20:50:02.901160" elapsed="0.004250"/>
+</test>
+<status status="PASS" start="2026-01-29T20:50:02.377830" elapsed="0.528858"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Testentretienfile" id="s1" pass="1" fail="0" skip="0">Testentretienfile</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

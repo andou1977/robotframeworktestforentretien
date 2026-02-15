@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.11.0 on win32)" generated="2026-01-29T21:10:47.081374" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.11.0 on win32)" generated="2026-02-15T10:53:37.479273" rpa="false" schemaversion="5">
 <suite id="s1" name="Robotframeworktestforentretien" source="C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien">
 <suite id="s1-s1" name="Tests" source="C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests">
 <suite id="s1-s1-s1" name="Api" source="C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\api">
@@ -7,131 +7,131 @@
 <test id="s1-s1-s1-s1-t1" name="envoie requette post et verification" line="27">
 <kw name="create my user">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-01-29T21:10:47.366459" level="INFO">Creating Session using : alias=sendpost, url=https://6957bb19f7ea690182d2e402.mockapi.io/api/andouv1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-02-15T10:53:37.706766" level="INFO">Creating Session using : alias=sendpost, url=https://6957bb19f7ea690182d2e402.mockapi.io/api/andouv1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>sendpost</arg>
 <arg>${url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-01-29T21:10:47.366459" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-15T10:53:37.706766" elapsed="0.000000"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-01-29T21:10:47.367579" level="INFO">${sendvalue} = {'name': 'andou', 'avatar': 'https://avatars.githubusercontent.com/u/30204827', 'createdAt': '2026-01-02T09:48:47.130Z'}</msg>
+<msg time="2026-02-15T10:53:37.706766" level="INFO">${sendvalue} = {'name': 'andou', 'avatar': 'https://avatars.githubusercontent.com/u/30204827', 'createdAt': '2026-01-02T09:48:47.130Z'}</msg>
 <var>${sendvalue}</var>
 <arg>name=andou</arg>
 <arg>avatar=https://avatars.githubusercontent.com/u/30204827</arg>
 <arg>createdAt=${date}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-01-29T21:10:47.366459" elapsed="0.001120"/>
+<status status="PASS" start="2026-02-15T10:53:37.706766" elapsed="0.000000"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2026-01-29T21:10:47.762139" level="INFO">POST Request : url=https://6957bb19f7ea690182d2e402.mockapi.io/api/andouv1/andouv1api 
+<msg time="2026-02-15T10:53:38.079039" level="INFO">POST Request : url=https://6957bb19f7ea690182d2e402.mockapi.io/api/andouv1/andouv1api 
  path_url=/api/andouv1/andouv1api 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '120', 'Content-Type': 'application/json'} 
  body=b'{"name": "andou", "avatar": "https://avatars.githubusercontent.com/u/30204827", "createdAt": "2026-01-02T09:48:47.130Z"}' 
  </msg>
-<msg time="2026-01-29T21:10:47.762139" level="INFO">POST Response : url=https://6957bb19f7ea690182d2e402.mockapi.io/api/andouv1/andouv1api 
+<msg time="2026-02-15T10:53:38.079039" level="INFO">POST Response : url=https://6957bb19f7ea690182d2e402.mockapi.io/api/andouv1/andouv1api 
  status=201, reason=Created 
- headers={'Access-Control-Allow-Headers': 'X-Requested-With,Content-Type,Cache-Control,access_token', 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS', 'Access-Control-Allow-Origin': '*', 'Content-Length': '124', 'Content-Type': 'application/json', 'Date': 'Thu, 29 Jan 2026 20:10:46 GMT', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=LBrUa3gItBFkDDKX1Q0UkBgWJNYxWGG32O%2FTzgRaz9w%3D\\u0026sid=1b10b0ff-8a76-4548-befa-353fc6c6c045\\u0026ts=1769717446"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=LBrUa3gItBFkDDKX1Q0UkBgWJNYxWGG32O%2FTzgRaz9w%3D&amp;sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&amp;ts=1769717446"', 'Server': 'Heroku', 'Via': '1.1 heroku-router', 'X-Powered-By': 'Express'} 
- body={"createdAt":"2026-01-02T09:48:47.130Z","name":"andou","avatar":"https://avatars.githubusercontent.com/u/30204827","id":"8"} 
+ headers={'Access-Control-Allow-Headers': 'X-Requested-With,Content-Type,Cache-Control,access_token', 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS', 'Access-Control-Allow-Origin': '*', 'Content-Length': '125', 'Content-Type': 'application/json', 'Date': 'Sun, 15 Feb 2026 09:53:37 GMT', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=4DFiqzVIvm9Wad7pLdUIyTEI2lyPElwn25iEB4bT354%3D\\u0026sid=1b10b0ff-8a76-4548-befa-353fc6c6c045\\u0026ts=1771149217"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=4DFiqzVIvm9Wad7pLdUIyTEI2lyPElwn25iEB4bT354%3D&amp;sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&amp;ts=1771149217"', 'Server': 'Heroku', 'Via': '1.1 heroku-router', 'X-Powered-By': 'Express'} 
+ body={"createdAt":"2026-01-02T09:48:47.130Z","name":"andou","avatar":"https://avatars.githubusercontent.com/u/30204827","id":"10"} 
  </msg>
-<msg time="2026-01-29T21:10:47.763144" level="INFO">C:\Users\GENIUS\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '6957bb19f7ea690182d2e402.mockapi.io'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2026-02-15T10:53:38.079039" level="INFO">C:\Users\GENIUS\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '6957bb19f7ea690182d2e402.mockapi.io'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2026-01-29T21:10:47.763144" level="INFO">${myvalue} = &lt;Response [201]&gt;</msg>
+<msg time="2026-02-15T10:53:38.080039" level="INFO">${myvalue} = &lt;Response [201]&gt;</msg>
 <var>${myvalue}</var>
 <arg>sendpost</arg>
 <arg>/andouv1api</arg>
 <arg>json=${sendvalue}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2026-01-29T21:10:47.367579" elapsed="0.395565"/>
+<status status="PASS" start="2026-02-15T10:53:37.707758" elapsed="0.372281"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>201</arg>
 <arg>${myvalue}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-01-29T21:10:47.763144" elapsed="0.000996"/>
+<status status="PASS" start="2026-02-15T10:53:38.081037" elapsed="0.000000"/>
 </kw>
 <kw name="To Json" owner="RequestsLibrary">
-<msg time="2026-01-29T21:10:47.764140" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
-<msg time="2026-01-29T21:10:47.764140" level="INFO">To JSON using : content={"createdAt":"2026-01-02T09:48:47.130Z","name":"andou","avatar":"https://avatars.githubusercontent.com/u/30204827","id":"8"} </msg>
-<msg time="2026-01-29T21:10:47.764140" level="INFO">To JSON using : pretty_print=False </msg>
-<msg time="2026-01-29T21:10:47.765138" level="INFO">${verifierchamp} = {'createdAt': '2026-01-02T09:48:47.130Z', 'name': 'andou', 'avatar': 'https://avatars.githubusercontent.com/u/30204827', 'id': '8'}</msg>
+<msg time="2026-02-15T10:53:38.081037" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+<msg time="2026-02-15T10:53:38.083091" level="INFO">To JSON using : content={"createdAt":"2026-01-02T09:48:47.130Z","name":"andou","avatar":"https://avatars.githubusercontent.com/u/30204827","id":"10"} </msg>
+<msg time="2026-02-15T10:53:38.083091" level="INFO">To JSON using : pretty_print=False </msg>
+<msg time="2026-02-15T10:53:38.083091" level="INFO">${verifierchamp} = {'createdAt': '2026-01-02T09:48:47.130Z', 'name': 'andou', 'avatar': 'https://avatars.githubusercontent.com/u/30204827', 'id': '10'}</msg>
 <var>${verifierchamp}</var>
 <arg>${myvalue.content}</arg>
 <doc>*DEPRECATED* Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</doc>
-<status status="PASS" start="2026-01-29T21:10:47.764140" elapsed="0.000998"/>
+<status status="PASS" start="2026-02-15T10:53:38.081037" elapsed="0.002054"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${verifierchamp['name']}</arg>
 <arg>andou</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-01-29T21:10:47.765138" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-15T10:53:38.083091" elapsed="0.001327"/>
 </kw>
-<status status="PASS" start="2026-01-29T21:10:47.365461" elapsed="0.399677"/>
+<status status="PASS" start="2026-02-15T10:53:37.705753" elapsed="0.378665"/>
 </kw>
-<status status="PASS" start="2026-01-29T21:10:47.364454" elapsed="0.400684"/>
+<status status="PASS" start="2026-02-15T10:53:37.705753" elapsed="0.379662"/>
 </test>
-<status status="PASS" start="2026-01-29T21:10:47.127250" elapsed="0.638889"/>
+<status status="PASS" start="2026-02-15T10:53:37.500850" elapsed="0.586085"/>
 </suite>
-<status status="PASS" start="2026-01-29T21:10:47.122160" elapsed="0.643979"/>
+<status status="PASS" start="2026-02-15T10:53:37.498862" elapsed="0.589075"/>
 </suite>
 <suite id="s1-s1-s2" name="Complet" source="C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\complet">
 <suite id="s1-s1-s2-s1" name="Testentretiencomplet" source="C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\complet\testentretiencomplet.robot">
 <test id="s1-s1-s2-s1-t1" name="MyApi" line="14">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2026-01-29T21:10:47.808465" level="INFO">Creating Session using : alias=myapi, url=https://6957bb19f7ea690182d2e402.mockapi.io/api/andouv1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2026-02-15T10:53:38.131515" level="INFO">Creating Session using : alias=myapi, url=https://6957bb19f7ea690182d2e402.mockapi.io/api/andouv1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>myapi</arg>
 <arg>https://6957bb19f7ea690182d2e402.mockapi.io/api/andouv1</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2026-01-29T21:10:47.808465" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-15T10:53:38.131515" elapsed="0.000000"/>
 </kw>
 <kw name="Get Request" owner="RequestsLibrary">
-<msg time="2026-01-29T21:10:47.808465" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
-<msg time="2026-01-29T21:10:48.109588" level="INFO">GET Request : url=https://6957bb19f7ea690182d2e402.mockapi.io/api/andouv1/andouv1api/3 
- path_url=/api/andouv1/andouv1api/3 
+<msg time="2026-02-15T10:53:38.131974" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2026-02-15T10:53:38.445543" level="INFO">GET Request : url=https://6957bb19f7ea690182d2e402.mockapi.io/api/andouv1/andouv1api/4 
+ path_url=/api/andouv1/andouv1api/4 
  headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2026-01-29T21:10:48.110588" level="INFO">GET Response : url=https://6957bb19f7ea690182d2e402.mockapi.io/api/andouv1/andouv1api/3 
+<msg time="2026-02-15T10:53:38.445543" level="INFO">GET Response : url=https://6957bb19f7ea690182d2e402.mockapi.io/api/andouv1/andouv1api/4 
  status=200, reason=OK 
- headers={'Access-Control-Allow-Headers': 'X-Requested-With,Content-Type,Cache-Control,access_token', 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS', 'Access-Control-Allow-Origin': '*', 'Content-Length': '124', 'Content-Type': 'application/json', 'Date': 'Thu, 29 Jan 2026 20:10:47 GMT', 'Etag': '"-688952211"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=68uui%2Bfad3VRMrQbgsvvaSz0Whj4CWPdOvzPgtK2T6c%3D\\u0026sid=1b10b0ff-8a76-4548-befa-353fc6c6c045\\u0026ts=1769717447"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=68uui%2Bfad3VRMrQbgsvvaSz0Whj4CWPdOvzPgtK2T6c%3D&amp;sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&amp;ts=1769717447"', 'Server': 'Heroku', 'Via': '1.1 heroku-router', 'X-Powered-By': 'Express'} 
- body={"createdAt":"2026-01-02T09:48:47.130Z","name":"andou","avatar":"https://avatars.githubusercontent.com/u/30204827","id":"3"} 
+ headers={'Access-Control-Allow-Headers': 'X-Requested-With,Content-Type,Cache-Control,access_token', 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,OPTIONS', 'Access-Control-Allow-Origin': '*', 'Content-Length': '127', 'Content-Type': 'application/json', 'Date': 'Sun, 15 Feb 2026 09:53:37 GMT', 'Etag': '"1837624210"', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=4DFiqzVIvm9Wad7pLdUIyTEI2lyPElwn25iEB4bT354%3D\\u0026sid=1b10b0ff-8a76-4548-befa-353fc6c6c045\\u0026ts=1771149217"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=4DFiqzVIvm9Wad7pLdUIyTEI2lyPElwn25iEB4bT354%3D&amp;sid=1b10b0ff-8a76-4548-befa-353fc6c6c045&amp;ts=1771149217"', 'Server': 'Heroku', 'Via': '1.1 heroku-router', 'X-Powered-By': 'Express'} 
+ body={"createdAt":"2026-02-13T15:11:02.972Z","name":"emmanuel","avatar":"https://avatars.githubusercontent.com/u/30204827","id":"4"} 
  </msg>
-<msg time="2026-01-29T21:10:48.110588" level="INFO">C:\Users\GENIUS\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '6957bb19f7ea690182d2e402.mockapi.io'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2026-02-15T10:53:38.445543" level="INFO">C:\Users\GENIUS\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '6957bb19f7ea690182d2e402.mockapi.io'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2026-01-29T21:10:48.110588" level="INFO">${myapi} = &lt;Response [200]&gt;</msg>
+<msg time="2026-02-15T10:53:38.446541" level="INFO">${myapi} = &lt;Response [200]&gt;</msg>
 <var>${myapi}</var>
 <arg>myapi</arg>
-<arg>/andouv1api/3</arg>
+<arg>/andouv1api/4</arg>
 <doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
-<status status="PASS" start="2026-01-29T21:10:47.808465" elapsed="0.302123"/>
+<status status="PASS" start="2026-02-15T10:53:38.131974" elapsed="0.314567"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>200</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.110588" elapsed="0.000991"/>
+<status status="PASS" start="2026-02-15T10:53:38.446541" elapsed="0.000000"/>
 </kw>
 <kw name="To Json" owner="RequestsLibrary">
-<msg time="2026-01-29T21:10:48.111579" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
-<msg time="2026-01-29T21:10:48.112586" level="INFO">To JSON using : content={"createdAt":"2026-01-02T09:48:47.130Z","name":"andou","avatar":"https://avatars.githubusercontent.com/u/30204827","id":"3"} </msg>
-<msg time="2026-01-29T21:10:48.112586" level="INFO">To JSON using : pretty_print=False </msg>
-<msg time="2026-01-29T21:10:48.112586" level="INFO">${mysession} = {'createdAt': '2026-01-02T09:48:47.130Z', 'name': 'andou', 'avatar': 'https://avatars.githubusercontent.com/u/30204827', 'id': '3'}</msg>
+<msg time="2026-02-15T10:53:38.446541" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+<msg time="2026-02-15T10:53:38.448542" level="INFO">To JSON using : content={"createdAt":"2026-02-13T15:11:02.972Z","name":"emmanuel","avatar":"https://avatars.githubusercontent.com/u/30204827","id":"4"} </msg>
+<msg time="2026-02-15T10:53:38.448542" level="INFO">To JSON using : pretty_print=False </msg>
+<msg time="2026-02-15T10:53:38.448542" level="INFO">${mysession} = {'createdAt': '2026-02-13T15:11:02.972Z', 'name': 'emmanuel', 'avatar': 'https://avatars.githubusercontent.com/u/30204827', 'id': '4'}</msg>
 <var>${mysession}</var>
 <arg>${myapi.content}</arg>
 <doc>*DEPRECATED* Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.111579" elapsed="0.001007"/>
+<status status="PASS" start="2026-02-15T10:53:38.446541" elapsed="0.002001"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${mysession['name']}</arg>
-<arg>andou</arg>
+<arg>emmanuel</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.112586" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-15T10:53:38.448542" elapsed="0.000996"/>
 </kw>
-<status status="PASS" start="2026-01-29T21:10:47.807466" elapsed="0.306119"/>
+<status status="PASS" start="2026-02-15T10:53:38.130505" elapsed="0.319033"/>
 </test>
 <test id="s1-s1-s2-s1-t2" name="Mydatabase" line="22">
 <kw name="Connect To Database" owner="DatabaseLibrary">
-<msg time="2026-01-29T21:10:48.114579" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
-<msg time="2026-01-29T21:10:48.114579" level="INFO">Configuration file doesn't exist</msg>
-<msg time="2026-01-29T21:10:48.129678" level="INFO">Connect to DB using : pymysql.connect(db='bank', user='root', passwd=***, host='localhost', port=3306, charset='utf8mb4')</msg>
+<msg time="2026-02-15T10:53:38.450539" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
+<msg time="2026-02-15T10:53:38.451617" level="INFO">Configuration file doesn't exist</msg>
+<msg time="2026-02-15T10:53:38.466970" level="INFO">Connect to DB using : pymysql.connect(db='bank', user='root', passwd=***, host='localhost', port=3306, charset='utf8mb4')</msg>
 <arg>pymysql</arg>
 <arg>bank</arg>
 <arg>root</arg>
@@ -141,71 +141,71 @@
 <doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
 Along with listed commonly used arguments (`db_name`, `db_host` etc.)
 you can set any other DB module specific parameters as key/value pairs.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.114579" elapsed="0.018106"/>
+<status status="PASS" start="2026-02-15T10:53:38.450539" elapsed="0.018430"/>
 </kw>
 <kw name="Query" owner="DatabaseLibrary">
-<msg time="2026-01-29T21:10:48.133678" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select * from transaction where id=4 and description='description 100'&lt;/code&gt;</msg>
-<msg time="2026-01-29T21:10:48.134686" level="INFO">Commit the transaction</msg>
-<msg time="2026-01-29T21:10:48.134984" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;account_id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;description&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;amount&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;date&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;5&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;description 100&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;5060.700&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2020-01-24&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
-<msg time="2026-01-29T21:10:48.134984" level="INFO">${mybase} = ((4, 5, 'description 100', Decimal('5060.700'), datetime.date(2020, 1, 24)),)</msg>
+<msg time="2026-02-15T10:53:38.468969" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select * from transaction where id=4 and description='description 100'&lt;/code&gt;</msg>
+<msg time="2026-02-15T10:53:38.469969" level="INFO">Commit the transaction</msg>
+<msg time="2026-02-15T10:53:38.470970" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;account_id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;description&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;amount&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;date&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;5&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;description 100&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;5060.700&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2020-01-24&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2026-02-15T10:53:38.470970" level="INFO">${mybase} = ((4, 5, 'description 100', Decimal('5060.700'), datetime.date(2020, 1, 24)),)</msg>
 <var>${mybase}</var>
 <arg>select * from transaction where id=4 and description='description 100'</arg>
 <doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
 The type of row values depends on the database module -
 usually they are tuples or tuple-like objects.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.133678" elapsed="0.001306"/>
+<status status="PASS" start="2026-02-15T10:53:38.468969" elapsed="0.002001"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2026-01-29T21:10:48.134984" level="INFO">Length is 1.</msg>
+<msg time="2026-02-15T10:53:38.470970" level="INFO">Length is 1.</msg>
 <arg>${mybase}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.134984" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-15T10:53:38.470970" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-01-29T21:10:48.113585" elapsed="0.021399"/>
+<status status="PASS" start="2026-02-15T10:53:38.450539" elapsed="0.021430"/>
 </test>
 <test id="s1-s1-s2-s1-t3" name="verifier log" line="27">
 <kw name="Get File" owner="OperatingSystem">
-<msg time="2026-01-29T21:10:48.135821" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\file\myfile.log"&gt;C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\file\myfile.log&lt;/a&gt;'.</msg>
-<msg time="2026-01-29T21:10:48.136835" level="INFO">${myfile} = mon premier fichier log dans robot pour maintenant</msg>
+<msg time="2026-02-15T10:53:38.472970" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\file\myfile.log"&gt;C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\file\myfile.log&lt;/a&gt;'.</msg>
+<msg time="2026-02-15T10:53:38.473477" level="INFO">${myfile} = mon premier fichier log dans robot pour maintenant</msg>
 <var>${myfile}</var>
 <arg>C:\\Users\\GENIUS\\IdeaProjects\\robotframeworktestforentretien\\tests\\file\\myfile.log</arg>
 <doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.135821" elapsed="0.001014"/>
+<status status="PASS" start="2026-02-15T10:53:38.472970" elapsed="0.000507"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${myfile}</arg>
 <arg>mon premier fichier log dans robot</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.136835" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-15T10:53:38.473477" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-01-29T21:10:48.135821" elapsed="0.001014"/>
+<status status="PASS" start="2026-02-15T10:53:38.471969" elapsed="0.001508"/>
 </test>
 <test id="s1-s1-s2-s1-t4" name="verifier log via librarie python" line="31">
 <kw name="Myfilenow" owner="FileVerify">
-<msg time="2026-01-29T21:10:48.137830" level="INFO">${myfilelibraies} = mon premier fichier log dans robot pour maintenant</msg>
+<msg time="2026-02-15T10:53:38.475689" level="INFO">${myfilelibraies} = mon premier fichier log dans robot pour maintenant</msg>
 <var>${myfilelibraies}</var>
-<status status="PASS" start="2026-01-29T21:10:48.137830" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-15T10:53:38.474479" elapsed="0.001210"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${myfilelibraies}</arg>
 <arg>mon premier fichier log dans robot pour maintenant</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.138833" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-15T10:53:38.475689" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-01-29T21:10:48.136835" elapsed="0.001998"/>
+<status status="PASS" start="2026-02-15T10:53:38.474479" elapsed="0.001210"/>
 </test>
-<status status="PASS" start="2026-01-29T21:10:47.768618" elapsed="0.371210"/>
+<status status="PASS" start="2026-02-15T10:53:38.092990" elapsed="0.383911"/>
 </suite>
-<status status="PASS" start="2026-01-29T21:10:47.766139" elapsed="0.373689"/>
+<status status="PASS" start="2026-02-15T10:53:38.089467" elapsed="0.388448"/>
 </suite>
 <suite id="s1-s1-s3" name="Databases" source="C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\databases">
 <suite id="s1-s1-s3-s1" name="Testentretiendatabase" source="C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\databases\testentretiendatabase.robot">
 <test id="s1-s1-s3-s1-t1" name="verify in database" line="11">
 <kw name="Connect To Database" owner="DatabaseLibrary">
-<msg time="2026-01-29T21:10:48.144828" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
-<msg time="2026-01-29T21:10:48.144828" level="INFO">Configuration file doesn't exist</msg>
-<msg time="2026-01-29T21:10:48.144828" level="INFO">Connect to DB using : pymysql.connect(db='bank', user='root', passwd=***, host='localhost', port=3306, charset='utf8mb4')</msg>
-<msg time="2026-01-29T21:10:48.170427" level="WARN">Overwriting not closed connection.</msg>
+<msg time="2026-02-15T10:53:38.482995" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
+<msg time="2026-02-15T10:53:38.482995" level="INFO">Configuration file doesn't exist</msg>
+<msg time="2026-02-15T10:53:38.482995" level="INFO">Connect to DB using : pymysql.connect(db='bank', user='root', passwd=***, host='localhost', port=3306, charset='utf8mb4')</msg>
+<msg time="2026-02-15T10:53:38.483999" level="WARN">Overwriting not closed connection.</msg>
 <arg>pymysql</arg>
 <arg>bank</arg>
 <arg>root</arg>
@@ -215,67 +215,67 @@ usually they are tuples or tuple-like objects.</doc>
 <doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
 Along with listed commonly used arguments (`db_name`, `db_host` etc.)
 you can set any other DB module specific parameters as key/value pairs.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.144828" elapsed="0.026598"/>
+<status status="PASS" start="2026-02-15T10:53:38.482995" elapsed="0.001004"/>
 </kw>
 <kw name="Query" owner="DatabaseLibrary">
-<msg time="2026-01-29T21:10:48.171426" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select * from transaction where id=6 and description='description 200' and amount=400.566&lt;/code&gt;</msg>
-<msg time="2026-01-29T21:10:48.172595" level="INFO">Commit the transaction</msg>
-<msg time="2026-01-29T21:10:48.173594" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;account_id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;description&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;amount&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;date&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;6&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;description 200&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;400.566&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2026-01-28&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
-<msg time="2026-01-29T21:10:48.173594" level="INFO">${myquery} = ((6, 2, 'description 200', Decimal('400.566'), datetime.date(2026, 1, 28)),)</msg>
+<msg time="2026-02-15T10:53:38.485503" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select * from transaction where id=6 and description='description 200' and amount=400.566&lt;/code&gt;</msg>
+<msg time="2026-02-15T10:53:38.486509" level="INFO">Commit the transaction</msg>
+<msg time="2026-02-15T10:53:38.486509" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 1 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;account_id&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;description&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;amount&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;date&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;6&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;description 200&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;400.566&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2026-02-12&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2026-02-15T10:53:38.486509" level="INFO">${myquery} = ((6, 2, 'description 200', Decimal('400.566'), datetime.date(2026, 2, 12)),)</msg>
 <var>${myquery}</var>
 <arg>select * from transaction where id=6 and description='description 200' and amount=400.566</arg>
 <doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
 The type of row values depends on the database module -
 usually they are tuples or tuple-like objects.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.171426" elapsed="0.002168"/>
+<status status="PASS" start="2026-02-15T10:53:38.485503" elapsed="0.001006"/>
 </kw>
 <kw name="Should Not Be Empty" owner="BuiltIn">
-<msg time="2026-01-29T21:10:48.173594" level="INFO">Length is 1.</msg>
+<msg time="2026-02-15T10:53:38.486509" level="INFO">Length is 1.</msg>
 <arg>${myquery}</arg>
 <doc>Verifies that the given item is not empty.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.173594" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-15T10:53:38.486509" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-01-29T21:10:48.144828" elapsed="0.028766"/>
+<status status="PASS" start="2026-02-15T10:53:38.481493" elapsed="0.005016"/>
 </test>
-<status status="PASS" start="2026-01-29T21:10:48.142828" elapsed="0.031760"/>
+<status status="PASS" start="2026-02-15T10:53:38.480497" elapsed="0.007434"/>
 </suite>
-<status status="PASS" start="2026-01-29T21:10:48.140828" elapsed="0.033760"/>
+<status status="PASS" start="2026-02-15T10:53:38.478482" elapsed="0.010449"/>
 </suite>
 <suite id="s1-s1-s4" name="File" source="C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\file">
 <suite id="s1-s1-s4-s1" name="Testentretienfile" source="C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\file\testentretienfile.robot">
 <test id="s1-s1-s4-s1-t1" name="le fichier" line="18">
 <kw name="le fichier log">
 <kw name="Get File" owner="OperatingSystem">
-<msg time="2026-01-29T21:10:48.580492" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\file\myfile.log"&gt;C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\file\myfile.log&lt;/a&gt;'.</msg>
-<msg time="2026-01-29T21:10:48.581493" level="INFO">${my file} = mon premier fichier log dans robot pour maintenant</msg>
+<msg time="2026-02-15T10:53:38.867418" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\file\myfile.log"&gt;C:\Users\GENIUS\IdeaProjects\robotframeworktestforentretien\tests\file\myfile.log&lt;/a&gt;'.</msg>
+<msg time="2026-02-15T10:53:38.868498" level="INFO">${my file} = mon premier fichier log dans robot pour maintenant</msg>
 <var>${my file}</var>
 <arg>C:\\Users\\GENIUS\\IdeaProjects\\robotframeworktestforentretien\\tests\\file\\myfile.log</arg>
 <doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.580492" elapsed="0.001001"/>
+<status status="PASS" start="2026-02-15T10:53:38.867418" elapsed="0.001080"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${my file}</arg>
 <arg>mon premier fichier log dans robot</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.581493" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-15T10:53:38.868498" elapsed="0.000000"/>
 </kw>
 <kw name="Should Not Contain" owner="BuiltIn">
 <arg>${my file}</arg>
 <arg>erreur critique</arg>
 <doc>Fails if ``container`` contains ``item`` one or more times.</doc>
-<status status="PASS" start="2026-01-29T21:10:48.582495" elapsed="0.000000"/>
+<status status="PASS" start="2026-02-15T10:53:38.868498" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2026-01-29T21:10:48.580492" elapsed="0.002003"/>
+<status status="PASS" start="2026-02-15T10:53:38.867418" elapsed="0.001080"/>
 </kw>
-<status status="PASS" start="2026-01-29T21:10:48.580492" elapsed="0.002003"/>
+<status status="PASS" start="2026-02-15T10:53:38.867418" elapsed="0.002060"/>
 </test>
-<status status="PASS" start="2026-01-29T21:10:48.176599" elapsed="0.406927"/>
+<status status="PASS" start="2026-02-15T10:53:38.490621" elapsed="0.378857"/>
 </suite>
-<status status="PASS" start="2026-01-29T21:10:48.175595" elapsed="0.408828"/>
+<status status="PASS" start="2026-02-15T10:53:38.489614" elapsed="0.380812"/>
 </suite>
-<status status="PASS" start="2026-01-29T21:10:47.117496" elapsed="1.466927"/>
+<status status="PASS" start="2026-02-15T10:53:37.496857" elapsed="1.373569"/>
 </suite>
-<status status="PASS" start="2026-01-29T21:10:47.082377" elapsed="1.502841"/>
+<status status="PASS" start="2026-02-15T10:53:37.480261" elapsed="1.391156"/>
 </suite>
 <statistics>
 <total>
@@ -297,9 +297,9 @@ usually they are tuples or tuple-like objects.</doc>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-01-29T21:10:47.764140" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
-<msg time="2026-01-29T21:10:47.808465" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
-<msg time="2026-01-29T21:10:48.111579" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
-<msg time="2026-01-29T21:10:48.170427" level="WARN">Overwriting not closed connection.</msg>
+<msg time="2026-02-15T10:53:38.081037" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+<msg time="2026-02-15T10:53:38.131974" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2026-02-15T10:53:38.446541" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+<msg time="2026-02-15T10:53:38.483999" level="WARN">Overwriting not closed connection.</msg>
 </errors>
 </robot>

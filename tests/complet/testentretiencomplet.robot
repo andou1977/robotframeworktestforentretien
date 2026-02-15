@@ -13,10 +13,10 @@ ${password}
 *** Test Cases ***
 MyApi
    Create Session   myapi   https://6957bb19f7ea690182d2e402.mockapi.io/api/andouv1
-   ${myapi}=  Get Request    myapi    /andouv1api/3
+   ${myapi}=  Get Request    myapi    /andouv1api/4
    Status Should Be    200
    ${mysession}=  To Json    ${myapi.content}
-   Should Be Equal    ${mysession['name']}    andou
+   Should Be Equal    ${mysession['name']}    emmanuel
 
 
 Mydatabase
